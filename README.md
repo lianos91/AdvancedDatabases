@@ -1,22 +1,12 @@
-
-======================================================================================================================
-GENERAL INFORMATION:
+#advdb
 
 This project is an auction application. 
 
-The front-end is a bidding application, which connects to the backend and manages the user-server communication 
-(e.g. new bid, inspect current item, drop from auction, etc.). 
+The front-end, i.e a bidding application, connects to the back-end, i.e an auction application which manages the user-server communication (e.g. new bid, inspect current item, drop from auction etc.). 
 
-The backend storage makes use of postgreSQL database system. Two separate database servers are running, 
-and each bidder connects to one of them.
-The consistency and synchronisation of the backend databases is carried out by a third server in a gossip-like fashion. 
-Implemented in C++. 
+The backend storage makes use of postgreSQL database system. Two separate database servers are running, and each bidder connects to one of them. The consistency and synchronisation of the backend databases is carried out by a thirdserver in a gossip-like fashion. Each bidder and server runs in a separate thread, to simulate a real multi-node application. The current project is implemented in C++.
 
-Each bidder and server runs in a separate thread, to simulate a real multi-node application.
-
-
-========================================================================================================================
-EXECUTION:
+##Execution
 
 Before doing anything change your directory to /advdbproj and compile the code by running "make".
 
